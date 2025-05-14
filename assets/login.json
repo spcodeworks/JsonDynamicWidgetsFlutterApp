@@ -1,0 +1,155 @@
+{
+  "type": "scaffold",
+  "args": {
+    "body": {
+      "type": "center",
+      "args": {
+        "child": {
+          "type": "single_child_scroll_view",
+          "args": {
+            "child": {
+              "type": "padding",
+              "args": {
+                "padding": [20, 20, 20, 20],
+                "child": {
+                  "type": "column",
+                  "args": {
+                    "mainAxisAlignment": "center",
+                    "crossAxisAlignment": "stretch",
+                    "children": [
+                      {
+                        "type": "text",
+                        "args": {
+                          "text": "Welcome Back",
+                          "style": {
+                            "fontSize": 28,
+                            "fontWeight": "bold"
+                          },
+                          "textAlign": "center"
+                        }
+                      },
+                      {
+                        "type": "sized_box",
+                        "args": {
+                          "height": 40
+                        }
+                      },
+                      {
+                        "type": "text_form_field",
+                        "args": {
+                          "decoration": {
+                            "labelText": "Email"
+                          },
+                          "controller": "${emailController}"
+                        }
+                      },
+                      {
+                        "type": "sized_box",
+                        "args": {
+                          "height": 20
+                        }
+                      },
+                      {
+                        "type": "text_form_field",
+                        "args": {
+                          "decoration": {
+                            "labelText": "Password"
+                          },
+                          "obscureText": true,
+                          "controller": "${passwordController}"
+                        }
+                      },
+                      {
+                        "type": "align",
+                        "args": {
+                          "alignment": "centerRight",
+                          "child": {
+                            "type": "text_button",
+                            "args": {
+                              "onPressed": "${handleForgotPassword()}",
+                              "child": {
+                                "type": "text",
+                                "args": {
+                                  "text": "Forgot Password?",
+                                  "style": {
+                                    "color": "#2196F3"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "sized_box",
+                        "args": {
+                          "height": 20
+                        }
+                      },
+                      {
+                        "type": "elevated_button",
+                        "args": {
+                          "style": {
+                            "backgroundColor": "#2196F3",
+                            "padding": [0, 15, 0, 15]
+                          },
+                          "onPressed": "${handleLogin()}",
+                          "child": {
+                            "type": "text",
+                            "args": {
+                              "text": "Login",
+                              "style": {
+                                "color": "#FFFFFF",
+                                "fontSize": 16
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "sized_box",
+                        "args": {
+                          "height": 20
+                        }
+                      },
+                      {
+                        "type": "row",
+                        "args": {
+                          "mainAxisAlignment": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "args": {
+                                "text": "Don't have an account? "
+                              }
+                            },
+                            {
+                              "type": "text_button",
+                              "args": {
+                                "onPressed": "${navigateToSignup()}",
+                                "child": {
+                                  "type": "text",
+                                  "args": {
+                                    "text": "Sign Up",
+                                    "style": {
+                                      "color": "#2196F3",
+                                      "fontWeight": "bold"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
